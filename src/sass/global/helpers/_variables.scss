@@ -23,8 +23,6 @@ $font-size-h3: 30px;
 $font-size-h4: 24px;
 $font-size-h5: 16px;
 
-// @include font-size();
-
 //LINE HEIGHT
 $line-height-main: 1.6;
 $line-height-title: 1;
@@ -38,133 +36,20 @@ $font-weight-title: 700;
 //
 
 $color-main: #9fcf67;
-
 $color-main-168: #a8d476; //rgb(168, 212, 118);
-$color-main-207: #cfe7b3; //rgb(207, 231, 179);
-$color-main-197: #c5dfa1; //rgb(197, 223, 161);
-$color-main-154: #9abd2c; //rgb(154, 189, 44);
-$color-main-204: #ccde95; //rgb(204, 222, 149);
-$color-main-191: #bfd578; //rgb(191, 213, 120);
-$color-main-159: #9fcf67; //rgb(159, 207, 103)
-
 $color-black: #000;
 $color-white: #fff;
-$color: #5b5b5b;
-
-$color-gray-lighten: #666666;
-$color-gray-light: #878787;
-$color-gray: #b9b2ae;
-$color-gray-237: #ededed; //rgb(237, 237, 237)
-$color-gray-121: #797979; //rgb(121, 121, 121)
-$color-gray-161: #a1a1a1; //rgb(161, 161, 161)
-$color-gray-209: #d1d1d1; //rgb(209, 209, 209)
-$color-gray-216: #d8d8d8; //rgb(216, 216, 216)
-// $color-gray-darken: #333;
-// $color-gray-darkest: #f4f6f5;
-$color-brown: #260e03;
-$color-brown-light: #b5aaa6;
-
 $color-danger: red;
 $color-success: green;
 $color-warning: yellow;
-
 $color-text: $color;
 $color-title: $color-gray-237;
 $color-link: $color-brown;
 $color-link-hover: $color-main-159;
-
 $background-body: $color-white;
 
 //
-//3. BUTTONS
-//
-
-// default
-
-$button: (
-	max-width: 100%,
-	min-width: 222px,
-	padding: 0 80px,
-	height: 41px,
-	line-height: 41px,
-	font-family: $font-family-ptsans,
-	font-size: 16px,
-	font-weight: 400,
-	border-width: 1px,
-	border-color: $color-main,
-	border-radius: 1px
-);
-
-//width: button(width);
-
-//primary - green
-$btn-primary-bg: $color-main;
-$btn-primary-bgHover: lighten($color-main, 10%);
-$btn-primary-bgActive: lighten($color-main, 20%);
-
-$btn-primary-color: #fff;
-$btn-primary-colorHover: #fff;
-$btn-primary-colorActive: #fff;
-
-//secondary - white
-$btn-secondary-bg: transparent;
-$btn-secondary-bgHover: transparent;
-$btn-secondary-bgActive: transparent;
-
-$btn-secondary-color: $color-brown-light;
-$btn-secondary-colorHover: lighten($color-brown-light, 10%);
-$btn-secondary-colorActive: lighten($color-brown-light, 20%);
-
-$btn-secondary-border: btn(border-width) solid $color-brown-light;
-$btn-secondary-borderHover: btn(border-width) solid lighten($color-brown-light, 10%);
-$btn-secondary-borderActive: btn(border-width) solid lighten($color-brown-light, 20%);
-
-
-//
-//4.FORMS
-//
-
-$form-width: 100%;
-$form-bg: #fff;
-$group-width:100%;
-$group-margin-bottom: 15px;
-
-//inputs
-$input: (
-	width: 100%,
-	height: 56px,
-	padding: 0 10px 0px 12px,
-	font-family: $font-family-ptsans,
-	font-size: $font-size-main,
-	font-weight: $font-weight-main,
-	font-style: regular,
-	color: $color,
-	border: 1px solid $color-gray-161,
-	border-radius: 0,
-	placeholder: $color-gray-121,
-	transition: all .3s,
-	background: transparent
-);
-//width: input(width);
-
- //textarea
-$textarea: (
-	width: 100%,
-	height: 150px,
-	padding: 12px,
-	font-family: $font-family-ptsans,
-	font-size: $font-size-main,
-	font-weight: $font-weight-main,
-	font-color: $color,
-	border: 1px solid $color-gray-161,
-	border-radius: 0,
-	placeholder: $color-gray-121,
-	transition: all .3s,
-	background: transparent
-);
-
-//
-// 5. @MEDIA QUERIES
+// 4. @MEDIA QUERIES
 //
 $breakpoints: (
 	"phone":   320px,
@@ -175,7 +60,7 @@ $breakpoints: (
 // @include mq('tablet') {}
 
 //
-// 6. Z-INDEX ELEMENTS
+// 5. Z-INDEX ELEMENTS
 //
 
 $z-layers: (

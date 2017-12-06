@@ -69,29 +69,6 @@ lazyRequireTask('html', './gulp/tasks/html', {
 	dest: paths.html.dest
 });
 
-
-/*----------------------------------------
-	PUG
-----------------------------------------*/
-// lazyRequireTask('pug', './gulp/tasks/pug', {
-// 	src: 'src/pug/*.pug',
-// 	dest: paths.html.dest
-// });
-
-// var versionConfig = {
-// 	'value': '%MDS%',
-// 	'append': {
-// 	  'key': 'v',
-// 	  'to': ['css', 'js'],
-// 	},
-// };
-
-// gulp.task('version', () => {
-// 	return gulp.src('build/*.html')
-// 	.pipe($.versionNumber(versionConfig))
-// 	.pipe(gulp.dest('build/'));
-// });
-
 /*----------------------------------------
 	STYLES
 ----------------------------------------*/
@@ -175,16 +152,6 @@ lazyRequireTask('image:min', './gulp/tasks/images', {
 	dest: paths.images.dest
 });
 
-
-/*----------------------------------------
-	MINIFY IMAGES in UPLOADS
-----------------------------------------*/
-
-lazyRequireTask('uploads:min', './gulp/tasks/images', {
-	src: 'src/uploads/*',
-	dest: './build/uploads/'
-});
-
 gulp.task('copy', function () {
 	return gulp.src('src/assets/**/*')
 		.pipe(gulp.dest('build/'))
@@ -196,12 +163,10 @@ gulp.task('watch', function () {
 	gulp.watch('src/sass/**/*.scss', ['sass']);
 	// html
 	gulp.watch(['src/html/**/*.html'], ['watch-html']);
-	// gulp.watch(['src/pug/**/*.pug'], ['watch-html']);
 	// js
 	gulp.watch("src/js/**/*.js", ['watch-js']);
 	// images
 	gulp.watch("src/images/*", ['image:min']);
-	gulp.watch("src/uploads/*", ['uploads:min']);
 	// svg
 	gulp.watch('src/svg/*.svg', ['svg']).on('change', function(event){
 		if (event.type === 'deleted') {
@@ -214,23 +179,6 @@ gulp.task('watch', function () {
 });
 
 
-/*----------------------------------------
-	ZIP FILES
-----------------------------------------*/
-lazyRequireTask('zip', './gulp/tasks/zip', {
-	src: paths.allDev,
-	dest: paths.tempDir
-});
-
-/*----------------------------------------
-	FTP
-----------------------------------------*/
-lazyRequireTask('ftp', './gulp/tasks/ftp', {
-	src: paths.allDev
-});
-
-
-
 gulp.task('default', ['js','svg','server','watch']);
 
-gulp.task('build', ['copy','js','svg', 'html', 'sass', 'svg:base', 'image:min', 'uploads:min']);
+gulp.task('build', ['copy','js','svg', 'html', 'sass', 'svg:base', 'image:min']);
