@@ -1,0 +1,383 @@
+/* ==========================================================================
+    COMPANY PAGE COLLECTIONS
+===========================================================================*/
+.collections {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 28px;
+  background-image: url('../images/collections-bg.jpg');
+  background-position: center;
+  text-align: center;
+  overflow: hidden;
+  @include mq('tablet') {
+    margin-bottom: 60px;
+    padding-bottom: 122px;
+  }
+  @include mq('laptop') {
+    padding-bottom: 152px;
+  }
+  @include mq('desktop') {
+    margin-bottom: 94px;
+    padding-bottom: 125px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: -1%;
+    left: -2%;
+    display: block;
+    width: 105%;
+    height: 103%;
+    filter: blur(20px);
+    z-index: 3;
+    background: inherit;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
+    filter: blur(10px);
+  }
+  .container {
+    position: relative;
+    z-index: 5;
+  }
+  &__title {
+    margin-bottom: 24px;
+    padding-top: 25px;
+    color: $color-black;
+    font-family: $font-family-yeseone;
+    @include font-size(18px);
+    line-height: 22px;
+    font-weight: $font-weight-main;
+    @include mq('tablet') {
+      width: 570px;
+      margin-bottom: 78px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 46px;
+      @include font-size(22px);
+      line-height: 26px;
+      letter-spacing: -0.4px;
+    }
+    @include mq('laptop') {
+      width: 730px;
+      margin-bottom: 114px;
+      padding-top: 57px;
+      @include font-size(24px);
+      line-height: 27px;
+      letter-spacing: -0.4px;
+    }
+    @include mq('desktop') {
+      width: 1000px;
+      margin-bottom: 88px;
+      @include font-size(26px);
+      line-height: 29px;
+      letter-spacing: -.3px;
+    }
+  }
+  &-circle {
+    display: none;
+    position: relative;
+    @include mq('tablet') {
+      display: block;
+      width: 385px;
+      height: 385px;
+      margin: auto;
+      background-image: url(../images/collections-bg.jpg);
+      background-position: center;
+      border-radius: 50%;
+      border: 6px solid $color-white;
+      box-shadow: 0 0 0 9px rgba(255,255,255,0.5);
+    }
+    @include mq('laptop') {
+      width: 524px;
+      height: 524px;
+      border-width: 7px;
+      box-shadow: 0 0 0 14px rgba(255,255,255,0.5);
+    }
+    @include mq('desktop') {
+      width: 575px;
+      height: 575px;
+      border-width: 8px;
+    }
+  }
+  &-circle-item {
+    display: none;
+  }
+  &-circle-item--active {
+    display: block;
+    position: absolute;
+    top: 17px;
+    left: 17px;
+    width: 340px;
+    height: 340px;
+    background-color: #7cca55;
+    border-radius: 50%;
+    opacity: 0.84;
+    z-index: z(button);
+    @include mq('laptop') {
+      top: 24px;
+      left: 21px;
+      width: 472px;
+      height: 472px;
+    }
+    @include mq('desktop') {
+      top: 14px;
+      left: 21px;
+      width: 520px;
+      height: 525px;
+    }
+  }
+  &-circle-content-wrap {
+    width: 275px;
+    margin: auto;
+    margin-top: 45px;
+    @include mq('laptop') {
+      width: 416px;
+      margin-top: 87px;
+    }
+    @include mq('desktop') {
+      width: 470px;
+      margin-top: 120px;
+    }
+  }
+}
+.collections-circle-content {
+  &__title {
+    min-height: 68px;
+    color: #ebebeb;
+    font-family: $font-family-yeseone;
+    @include font-size(34px);
+    font-weight: $font-weight-main;
+    line-height: 34px;
+    letter-spacing: -0.95px;
+    @include mq('laptop') {
+      margin-bottom: 24px;
+      @include font-size(53px);
+      line-height: 48.92px;
+      letter-spacing: -1.22px;
+    }
+    @include mq('desktop') {
+      @include font-size(63px);
+      line-height: 53.81px;
+      letter-spacing: -1.28px;
+    }
+  }
+  p {
+    color: $color-white;
+    font-family: $font-family-ptsans;
+    font-size: $font-size-main;
+    font-weight: $font-weight-main;
+    line-height: 16px;
+    @include mq('laptop') {
+      @include font-size(16px);
+      line-height: 23px;
+    }
+    @include mq('desktop') {
+      @include font-size(16px);
+    }
+  }
+  &__btn {
+    width: 186px;
+    min-width: 1px;
+    margin-top: 15px;
+    padding: 0;
+    cursor: pointer;
+    color: $color-white;
+    border-color: $color-white;
+    @include mq('laptop') {
+      width: 246px;
+      margin-top: 10px;
+    }
+    span {
+      &:before,
+      &:after {
+        background-color: $color-white;
+      }
+    }
+    &:before,
+    &:after {
+      background-color: $color-white;
+    }
+  }
+}
+.collections-tab {
+  display: none;
+  @include mq('tablet') {
+    display: block;
+    top: 186px;
+  }
+  &-wrapper {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    width: 755px;
+    margin: auto;
+    @include mq('laptop') {
+      top: 68px;
+      width: 930px;
+    }
+    @include mq('desktop') {
+      width: 1250px;
+    }
+  }
+}
+.collections-tab--left {
+  position: relative;
+  top: 0;
+  left: 0;
+  float: left;
+  padding-right: 94px;
+  width: 50%;
+  text-align: right;
+  .collections-tab-item {
+    position: relative;
+    margin-left: 16px;
+    padding-right: 62px;
+    @include mq('laptop') {
+      margin-left: 0;
+    }
+    @include mq('desktop') {
+      margin-left: 24px;
+    }
+    &:nth-child(1),
+    &:nth-child(4) {
+      margin-left: 110px;
+      @include mq('laptop') {
+        margin-left: 96px;
+        padding-right: 111px;
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      @include mq('laptop') {
+        padding-right: 111px;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 7px solid $color-white;
+      background-color: #7cca55;
+      border-radius: 50%;
+      cursor: pointer;
+      background-size: 27px 27px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2229%22%20height%3D%2229%22%20viewBox%3D%220%200%2029%2029%22%3E%3Cimage%20width%3D%2229%22%20height%3D%2229%22%20xlink%3Ahref%3D%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAC2ElEQVRIS72XW4iNURTHf%2F%2FwgEaa1CTFECZCiHlyexi5piheSOQy4UUeqJEkobzwwuSSpPHGKJlQHoRSCMkluY4SSpNG5gUtrbHP8c2Z73z7U9PZr%2Bfb%2B7f2Xuv%2FX%2BuIHMvMxgErgHnARGAE0A%2F4DXwEngM3gVZJr2JHKusDM5sN7AVmApeAG8Bj4IOkTjMbAowEpgINwHLgPrBP0u1yZ6dCzawKOAYsAg4AJyV1xW5gZoOAzcBu4CqwTdL30n29oGY2FmgDngCNkjpisNLfzazaAwUmA4slvUl%2B0wMagLeAZkn7%2FxeWAt%2FjgQNzk%2BAiNDzpA6ClL4CFAMzMwWuAGYWnTkLPAQMlrYzd0MxGA6OAdknvcnx%2FAeiStNa%2F7YaGKm0F6rJyaGbjgTNBNm%2BBMUEu67OkEnL80mXnVV2AuhSuSDpaLmozqwEehao%2BLOmnmQ0AdnqVAtMkfcnYvx1YKqlBQfiey%2BFZsjCzI0CVpI0pBXMa6JS0IwPqcvrUnVsz2wVMkLQuYhQuoa2S7qRAZwHHJU2JnHEWeOFQF%2FF5SS2RDc8Az929FGi951rSpMgZXsWrHdoOLJH0NLLBC%2BizpKYU6EGgRtKGyBkeVJtDfwHV7qWRDXXAXbc5SS6B7mVmq4ATQH3M7INXdzjUJGUafwKwMFjkUBd6MJRvwequx%2FQagrTcNw0bFgCHJE1PBPIQaJJ0LQZN3jRXTgPUdfxDkneRwvN6FxosyXWYucysmNNc1Rug7iqbJHlTKEDnAKckec5j0GL15tVpbWjgwyR58RWg%2FYGv3sglvc%2BimllRpz6K5HGkLcB8ST629FhmdtGnCknN5aChwf91pPBsebz3MuA38cZQujyQWknLMqD%2FvDdAfRbK7DJm5v7qU0W59TrNl8P5Pkn07DLhh9z9NFYwKc%2Ffu58GqA9jlZ0cAtifr3IzUkIClZ0GE%2BDKzr3JIqjohJ9SfX36X%2BYPQK2ka0a7stEAAAAASUVORK5CYII%3D%22%2F%3E%3C%2Fsvg%3E');
+      @include mq('laptop') {
+        right: 24px;
+      }
+    }
+  }
+}
+.collections-tab--right {
+  position: relative;
+  top: 0;
+  right: 0;
+  float: right;
+  padding-left: 59px;
+  width: 50%;
+  text-align: left;
+  @include mq('laptop') {
+    padding-left: 129px;
+  }
+  @include mq('desktop') {
+    padding-left: 180px;
+  }
+  .collections-tab-item {
+    position: relative;
+    padding-left: 62px;
+    @include mq('laptop') {
+      padding-left: 81px;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: 102px;
+      @include mq('desktop') {
+        margin-left: 78px;
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 50px;
+      height: 50px;
+      border: 7px solid $color-white;
+      background-color: #7cca55;
+      border-radius: 50%;
+      cursor: pointer;
+      background-size: 27px 27px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2229%22%20height%3D%2229%22%20viewBox%3D%220%200%2029%2029%22%3E%3Cimage%20width%3D%2229%22%20height%3D%2229%22%20xlink%3Ahref%3D%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAC2ElEQVRIS72XW4iNURTHf%2F%2FwgEaa1CTFECZCiHlyexi5piheSOQy4UUeqJEkobzwwuSSpPHGKJlQHoRSCMkluY4SSpNG5gUtrbHP8c2Z73z7U9PZr%2Bfb%2B7f2Xuv%2FX%2BuIHMvMxgErgHnARGAE0A%2F4DXwEngM3gVZJr2JHKusDM5sN7AVmApeAG8Bj4IOkTjMbAowEpgINwHLgPrBP0u1yZ6dCzawKOAYsAg4AJyV1xW5gZoOAzcBu4CqwTdL30n29oGY2FmgDngCNkjpisNLfzazaAwUmA4slvUl%2B0wMagLeAZkn7%2FxeWAt%2FjgQNzk%2BAiNDzpA6ClL4CFAMzMwWuAGYWnTkLPAQMlrYzd0MxGA6OAdknvcnx%2FAeiStNa%2F7YaGKm0F6rJyaGbjgTNBNm%2BBMUEu67OkEnL80mXnVV2AuhSuSDpaLmozqwEehao%2BLOmnmQ0AdnqVAtMkfcnYvx1YKqlBQfiey%2BFZsjCzI0CVpI0pBXMa6JS0IwPqcvrUnVsz2wVMkLQuYhQuoa2S7qRAZwHHJU2JnHEWeOFQF%2FF5SS2RDc8Az929FGi951rSpMgZXsWrHdoOLJH0NLLBC%2BizpKYU6EGgRtKGyBkeVJtDfwHV7qWRDXXAXbc5SS6B7mVmq4ATQH3M7INXdzjUJGUafwKwMFjkUBd6MJRvwequx%2FQagrTcNw0bFgCHJE1PBPIQaJJ0LQZN3jRXTgPUdfxDkneRwvN6FxosyXWYucysmNNc1Rug7iqbJHlTKEDnAKckec5j0GL15tVpbWjgwyR58RWg%2FYGv3sglvc%2BimllRpz6K5HGkLcB8ST629FhmdtGnCknN5aChwf91pPBsebz3MuA38cZQujyQWknLMqD%2FvDdAfRbK7DJm5v7qU0W59TrNl8P5Pkn07DLhh9z9NFYwKc%2Ffu58GqA9jlZ0cAtifr3IzUkIClZ0GE%2BDKzr3JIqjohJ9SfX36X%2BYPQK2ka0a7stEAAAAASUVORK5CYII%3D%22%2F%3E%3C%2Fsvg%3E');
+    }
+  }
+}
+.collections-tab-item--active {
+  &:after {
+    background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%3Cimage%20width%3D%2218%22%20height%3D%2218%22%20xlink%3Ahref%3D%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAjElEQVQ4T7WU2w2AIAxFbxd0AGdwHGdwAEdykRoSNFJKKQ3yBQk9vX0SM18ANiI6ETjMvADYKV8OAOsorLBNIiIwaUNPNCMw7e8L8iprOSxAPZilugK1YL3QVZCE5TyalW2CBCw9zfb4H%2FTNSTg0LbHDybYM3OXvebX6bO6IeJTIDVMNbQSiDvqsxXYD1rSeZwkgGOAAAAAASUVORK5CYII%3D%22%2F%3E%3C%2Fsvg%3E') !important;
+    @include mq('tablet') {
+      background-size: 22px 22px;
+      background-position: center;
+    }
+  }
+}
+.collections-tab-item {
+  width: 199px;
+  min-height: 44px;
+  margin-bottom: 76px;
+  @include mq('laptop') {
+    width: 267px;
+    margin-bottom: 98px;
+  }
+  @include mq('desktop') {
+    width: 370px;
+    margin-bottom: 95px;
+  }
+  a {
+    color: $color-black;
+    font-family: $font-family-yeseone;
+    @include font-size(15px);
+    line-height: 15px;
+    font-weight: $font-weight-main;
+    &:hover {
+      color: #9fcf67;
+    }
+    @include mq('laptop') {
+      @include font-size(20px);
+    }
+    @include mq('desktop') {
+      @include font-size(24px);
+      line-height: 38px;
+    }
+  }
+}
+.collections-list {
+  margin-left: 7px;
+  text-align: left;
+  @include mq('tablet') {
+    display: none;
+  }
+  li {
+    margin-bottom: 16px;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 6px 17px;
+    color: $color-black;
+    font-family: $font-family-yeseone;
+    @include font-size(15px);
+    font-weight: $font-weight-main;
+    border-radius: 20px;
+    border: 3px solid $color-white;
+    background-color: #7cca55;
+  }
+}
+/* end  company page collections  */

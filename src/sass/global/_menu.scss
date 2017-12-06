@@ -1,0 +1,17 @@
+/* ==========================================================================
+   MENU
+   ===========================================================================*/
+.panelswipe{
+	position: fixed;
+	z-index: 554;
+	top:80px;
+	right: 0;
+	display: block;
+	width: 30px;
+	height: 100%;
+	background: transparent;
+	@include mq('tablet'){
+		display: none;
+	}
+}
+/* end menu */

@@ -1,0 +1,329 @@
+/* ==========================================================================
+   HEADER
+   ===========================================================================*/
+.header {
+  position: relative;
+  display: flex;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  z-index: 3;
+  @include mq('tablet') {
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @include mq('laptop') {
+    padding-top: 11px;
+    padding-bottom: 9px;
+  }
+  @include mq('desktop') {
+    justify-content: inherit;
+    height: 107px;
+    padding-top: 24px;
+    padding-bottom: 27px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  &-logo {
+    display: inline-block;
+    vertical-align: top;
+    width: 148px;
+    margin-left: -5px;
+    @include mq('tablet') {
+      width: 298px;
+      margin-left: -10px;
+      line-height: 0.5;
+    }
+    @include mq('laptop') {
+      margin-left: 0;
+      line-height: 1.5;
+    }
+    @include mq('desktop') {
+      display: flex;
+      align-items: center;
+      width: 20.8%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-nav {
+    display: none;
+    @include mq('desktop') {
+      display: inline-block;
+      width: 36%;
+      vertical-align: top;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    ul {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 19px;
+      @include mq('desktop') {
+        width: 94%;
+        margin-top: 21px;
+        margin-left: auto;
+        justify-content: space-between;
+      }
+    }
+    li {
+      display: inline-block;
+      vertical-align: top;
+    }
+    a {
+      color: $color-brown;
+      font-family: $font-family-ptsans;
+      @include font-size(16px);
+      font-weight: $font-weight-title;
+      text-transform: uppercase;
+    }
+  }
+  &-phones {
+    display: inline-block;
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
+    color: $color-brown;
+    @include mq('tablet') {
+      width: 265px;
+      height: auto;
+      margin-top: 5px;
+      margin-left: 20px;
+      margin-right: auto;
+      background-image: none;
+    }
+    @include mq('laptop') {
+      margin-left: 36px;
+    }
+    @include mq('desktop') {
+      margin-top: 12px;
+      margin-left: 51px;
+      margin-right: 0;
+    }
+    &__btn {
+      width: 26px;
+      height: 26px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      @include mq('tablet') {
+        display: none;
+      }
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    a {
+      display: none;
+      @include mq('tablet') {
+        display: inline;
+        color: #230a03;
+        font-family: $font-family-ptsans;
+        @include font-size(16px);
+        font-weight: $font-weight-title;
+        line-height: 20px;
+      }
+    }
+  }
+  &-search {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 25px;
+    height: 26px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 27px;
+    @include mq('tablet') {
+      margin-top: 16px;
+      margin-right: 36px;
+      padding-right: 1%;
+      box-sizing: content-box;
+    }
+    @include mq('laptop') {
+      margin-top: 14px;
+      margin-left: auto;
+      margin-right: 36px;
+    }
+    @include mq('desktop') {
+      margin-top: 22px;
+      margin-right: 3%;
+      margin-left: auto;
+      padding-right: 1%;
+      box-sizing: content-box;
+    }
+  }
+  &-search--open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f6f6f6;
+    z-index: z(button);
+    transition: background-color 0.5s ease-in;
+    @include mq('tablet') {
+      position: relative;
+      left: 0;
+      width: 46%;
+      height: 46px;
+      margin-top: 0;
+      margin-left: auto;
+    }
+    @include mq('laptop') {
+      position: relative;
+      left: 0;
+      width: 58%;
+      min-height: 60px;
+      margin-left: auto;
+      margin-top: 0;
+    }
+    @include mq('desktop') {
+      width: 69.5%;
+      height: 68px;
+      margin-top: 0;
+      min-height: 0;
+    }
+  }
+  &-search__input {
+    width: 0;
+    height: 27px;
+    opacity: 0;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    transition: width, opacity 0.5s ease-in;
+    @include mq('tablet') {
+      height: 37px;
+    }
+  }
+  &-search__input--active {
+    width: 85%;
+    padding-left: 15px;
+    margin-left: 15px;
+    background-color: transparent;
+    color: $color-brown;
+    font-family: $font-family-ptsans;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: $font-weight-title;
+    opacity: 1;
+    border-bottom: 1px solid #959595;
+    &[placeholder] {
+      @media screen and (max-width: 767px) {
+        margin-top: 10px;
+        line-height: 1;
+      }
+    }
+    @include mq('tablet') {
+      width: 82%;
+      height: 18px;
+      margin-top: 19px;
+    }
+    @include mq('laptop') {
+      width: 87%;
+      margin-top: 18px;
+    }
+    @include mq('desktop') {
+      width: 92%;
+      margin-top: 27px;
+    }
+  }
+  &-search__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 26px;
+    @include font-size(0px);
+    background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2098.7%2098.7%22%3E%3Cpath%20d%3D%22M96.9%2088L70.8%2061.9c4.8-6.6%207.4-14.7%207.4-22.8C78.2%2017.5%2060.6%200%2039.1%200%2017.5%200%200%2017.5%200%2039.1c0%2021.5%2017.5%2039.1%2039.1%2039.1%208.3%200%2016.2-2.6%2022.8-7.4L88%2096.9c1.2%201.2%202.7%201.8%204.4%201.8s3.2-.6%204.4-1.8c2.5-2.5%202.5-6.5.1-8.9zM39.1%2065.6c-14.6%200-26.5-11.9-26.5-26.5s11.9-26.5%2026.5-26.5%2026.5%2011.9%2026.5%2026.5-11.9%2026.5-26.5%2026.5z%22%2F%3E%3C%2Fsvg%3E');
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    @include mq('tablet') {
+      padding: 0;
+    }
+  }
+  &-search__btn--active {
+    top: 0;
+    bottom: 0;
+    left: 92%;
+    margin: auto;
+    background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2225%22%20height%3D%2226%22%20viewBox%3D%220%200%2025%2026%22%3E%3Cimage%20width%3D%2225%22%20height%3D%2226%22%20xlink%3Ahref%3D%22data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAABkAAAAaCAYAAABCfffNAAADoUlEQVRIS62WX2xTdRTHv%2Bd22aAjYVYTgSXwMPWJbL0digSBofigxLhINiWi7S3SW5YYkD8JCSQrieFhbA8uMnoL8ZYZdW4zugcJDyTEAMOE2XYa9IGNKBu%2BCKhLCmG2v0Pu7W13be%2FWLdl9POd7zuf3O3%2F6K8HhO3WjbZn7UXYXgGYQngfgMWQETDLoGoj7%2FmhY%2BV2EIsIpvthGxYZ4Qn0fhC4GniqT4FdBrO72xq6UAxUg%2Ff0trvRznk%2FBCJcLsvkFE7UFvVFtrpgCRE%2Bp3WB8aBcz%2BDciaYhZjBNTBQhrQdgBxgq7jhj%2BgE%2FrnQ1kQvSU%2BhYY39hEUwRq83ujXxKB7cH6pcASfqLqEDGOA5As30MADYqs3XQCUeRSpGJNzZ9jAK2xBFOSkDb5G0%2F%2FPFcJ9GSoBaB%2Bm2ZIkbVmR0g8FW5l5q8LTqadii%2FaN5%2B%2B6Am1C4QDeS27pLpg%2FelbJdOlp0JfgekdyzEa8GpycYlmA%2BrJQA1QNQmg2hxx5kMBX6yrFJIM%2FT5TKj6qyLET87lFXqMn1W%2FNfcrt0WBA1locIKqxUPkp267I2vmFQcIRgNtzMXRdkaMvOEEK08MsmoK%2BMz8sBBJPhA4yUacRw0AyKGs%2BJ0gagNt0LKDp%2BUSfpcKdxHwwVy66GJCjr5ZA4kn1OgPrLMcZRdZCC7mJnlSTALy5M1J30Bvd53STDgCHLce%2F0nRFnX%2F9qXvzAek%2F7X0RkrhWGGGgOShrQyWQs6PhtS7Bv9iEvUFZ85eDmJtfUzVMgGw1%2Fa%2FprKhV18X%2BK4EYBj0VGgTTjhkQdyje2JHZ9qV39L3qrHAb2%2F66LeF%2BRdY%2BcTqcObrnUuFawWz8jJjvhvVdBehY9c17l1tbB7KGrX%2F4o6XpJQ%2FfBPHHAOrsCQn0UkCOXp0VYjjiCXUzEy4AWFok%2FAeEcQhUgszEuUks%2FaYE45XdPm3EsVx547mEukEQBgDUluuJ5b8NYHVeS8BddvHLSn2s0GPDV%2FIyaiOh5VUutAO0h4FljjDGBICT1WP3e9LPeoxF3G8HZYRrwweNPWM2m%2FOZjeZmhHsbETUy89MS8zRImsiSGJ74e9WPka2RjBHJDIqPqj1FL%2BqdrHA15UElN5lnmf4nM0Ep9XMA79octzJSdsuehrOTiwIxJ8%2F4j%2FCM5wsQ3raBxjMV2Y2LBjFBN1oq0488gyC8YevHlUWF5EEPpp%2F8nsHbrMnKLDrESKyNhNyVEvUR4TUGdTwGG59S2EXPIgoAAAAASUVORK5CYII%3D%22%2F%3E%3C%2Fsvg%3E');
+    @include mq('tablet') {
+      top: 16px;
+      left: auto;
+      right: 1.8%;
+      margin: 0;
+    }
+    @include mq('laptop') {
+      top: -6px;
+      right: 1.4%;
+      margin: auto;
+      background-size: 100% 100%;
+    }
+    @include mq('desktop') {
+      top: 4px;
+      right: 1.4%;
+    }
+  }
+  &-category {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 24px;
+    height: 24px;
+    margin-left: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-black;
+    @include font-size(0px);
+    &:before {
+      position: absolute;
+      top: 3px;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 3px;
+      content: '';
+      background-color: $color-brown;
+      box-shadow: 0 10px 0 $color-brown, 0 20px 0 $color-brown;
+    }
+    @include mq('tablet') {
+      margin-top: 13px;
+      margin-right: 7px;
+    }
+    @include mq('laptop') {
+      margin-top: 12px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @include mq('desktop') {
+      margin-top: 20px;
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+  &-category--hidden {
+    display: none;
+    @include mq('tablet') {
+      display: block;
+    }
+  }
+}
+/* end header */

@@ -1,0 +1,53 @@
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBayULjA81RPh4vGoU7GhQKKoZifGVTWGA&callback=initMap"></script>
+<script>
+  function initMap() {
+    var mapOptions = {
+      zoom: 5,
+      zoomControl: false,
+      scaleControl: false,
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: false,
+      center: new google.maps.LatLng(57.912385, 78.99036), // Sibirea
+      styles: [{"featureType":"all","elementType":"geometry","stylers":[{"color":"#978b6c"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"gamma":0.01},{"lightness":20}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"saturation":-31},{"lightness":-33},{"weight":2},{"gamma":0.8}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative.locality","elementType":"all","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"lightness":30},{"saturation":30},{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"saturation":20}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"lightness":20},{"saturation":-20}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":10},{"saturation":-30}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":25},{"lightness":25}]},{"featureType":"water","elementType":"all","stylers":[{"lightness":-20},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"saturation":"59"},{"lightness":"46"},{"color":"#ccd3cd"}]},{"featureType":"water","elementType":"geometry.stroke","stylers":[{"color":"#c9ccd3"}]}]
+    };
+    var mapElement = document.getElementById('buy-map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var marker1 = new google.maps.Marker({
+        position: new google.maps.LatLng(54.971308, 73.34507),
+        map: map,
+        title: 'Омск',
+        icon: "images/marker.svg",
+    });
+    var marker2 = new google.maps.Marker({
+      position: new google.maps.LatLng(55.065787, 82.969437),
+      map: map,
+      title: 'Новосибирск',
+      icon: "images/marker.svg",
+    });
+    var marker3 = new google.maps.Marker({
+      position: new google.maps.LatLng(51.11042, 71.49971),
+      map: map,
+      title: 'Астана',
+      icon: "images/marker-active.svg",
+    });
+    var marker4 = new google.maps.Marker({
+      position: new google.maps.LatLng(57.148161, 65.523148),
+      map: map,
+      title: 'Тюмень',
+      icon: "images/marker.svg",
+    });
+    var marker5 = new google.maps.Marker({
+      position: new google.maps.LatLng(55.14121, 61.436234),
+      map: map,
+      title: 'Челябинск',
+      icon: "images/marker.svg",
+    });
+    var marker6 = new google.maps.Marker({
+      position: new google.maps.LatLng(56.010666, 92.945023),
+      map: map,
+      title: 'Красноярск',
+      icon: "images/marker.svg",
+    });
+  }
+</script>

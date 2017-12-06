@@ -1,0 +1,271 @@
+// /*==========================================================================
+// 	 FOOTER
+// 	 ========================================================================== */
+.footer {
+  text-align: center;
+  &-menu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0;
+    background-color: $color-gray-216;
+    @include mq('tablet') {
+      padding-top: 22px;
+      padding-bottom: 23px;
+    }
+  }
+  &-menu__open {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: $color-black;
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      display: block;
+      width: 24px;
+      height: 3px;
+      margin: auto;
+      background-color: $color-brown;
+      border-radius: 2px;
+      box-shadow: 0px -10px 0 0 $color-brown,
+                  0px 10px 0 0 $color-brown;
+      transition: all 0.5s ease-in;
+      z-index: z(button);
+    }
+    @include mq('desktop') {
+      display: none;
+    }
+  }
+  &-menu-list {
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-gray-216;
+    margin-top: 16px;
+    padding-bottom: 24px;
+    @media screen and (max-width: 1279px) {
+      display: none;
+    }
+  }
+  &-menu-item {
+    position: relative;
+    width: 25%;
+    text-align: left;
+    ul {
+    }
+    li {
+      padding-left: 162px;
+      margin-bottom: 4px;
+    }
+
+    .btn_secondary {
+      min-width: 170px;
+      height: auto;
+      margin-top: 31px;
+      padding: 10px 15px;
+      line-height: 1;
+      letter-spacing: -1.0px;
+      text-align: center;
+      white-space: pre-wrap;
+    }
+
+    a {
+      color: $color-black;
+      font-family: $font-family-ptsans;
+      @include font-size(18px);
+      font-weight: $font-weight-main;
+    }
+  }
+  &-menu-item__title {
+    position: absolute;
+    top: 169px;
+    left: -220px;
+    width: 550px;
+    height: 128px;
+    opacity: 0.77;
+    color: $color-white;
+    font-family: $font-family-yeseone;
+    @include font-size(129px);
+    line-height: 115px;
+    font-weight: $font-weight-main;
+    letter-spacing: -0.41px;
+    transform: rotate(-90deg);
+    text-align: right;
+  }
+  &-wrapper {
+    background-color: $color-gray-209;
+    form {
+      position: relative;
+      padding-top: 15px;
+      @include mq('tablet') {
+        padding-top: 20px;
+      }
+      @include mq('desktop') {
+        width: 1238px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 51px;
+      }
+    }
+    input {
+      width: 95%;
+      padding-bottom: 10px;
+      padding-right: 40px;
+      outline: none;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid $color-white;
+      background-color: $color-gray-209;
+      @include font-size(24px);
+      @include mq('tablet') {
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 22px;
+        padding-left: 15px;
+      }
+      @include mq('laptop') {
+        padding-right: 50px;
+      }
+    }
+    button {
+      position: absolute;
+      top: 20px;
+      right: 6%;
+      padding: 0;
+      width: 25px;
+      height: 26px;
+      font-size: 0;
+      background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2098.7%2098.7%22%3E%3Cpath%20d%3D%22M96.9%2088L70.8%2061.9c4.8-6.6%207.4-14.7%207.4-22.8C78.2%2017.5%2060.6%200%2039.1%200%2017.5%200%200%2017.5%200%2039.1c0%2021.5%2017.5%2039.1%2039.1%2039.1%208.3%200%2016.2-2.6%2022.8-7.4L88%2096.9c1.2%201.2%202.7%201.8%204.4%201.8s3.2-.6%204.4-1.8c2.5-2.5%202.5-6.5.1-8.9zM39.1%2065.6c-14.6%200-26.5-11.9-26.5-26.5s11.9-26.5%2026.5-26.5%2026.5%2011.9%2026.5%2026.5-11.9%2026.5-26.5%2026.5z%22%2F%3E%3C%2Fsvg%3E');
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      @include mq('tablet') {
+        top: 28px;
+        right: 2.5%;
+      }
+      @include mq('laptop') {
+        top: 30px;
+        right: 2.1%;
+      }
+      @include mq('desktop') {
+        top: 63px;
+        right: 1.4%;
+      }
+    }
+  }
+  .social {
+    padding-top: 22px;
+    padding-bottom: 21px;
+    @include mq('tablet') {
+      padding-bottom: 45px;
+    }
+    a {
+      display: inline-block;
+    }
+  }
+  .social__title {
+    display: none;
+    @include mq('tablet') {
+      display: block;
+      color: $color-brown;
+      font-family: $font-family-title;
+      @include font-size(24px);
+      font-weight: $font-weight-main;
+    }
+  }
+  .social-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    @include mq('tablet') {
+      width: 61%;
+      margin-top: 24px;
+    }
+    @include mq('laptop') {
+      width: 48%;
+    }
+    @include mq('desktop') {
+      width: 460px;
+    }
+  }
+  .social__link {
+    width: 50px;
+    height: 50px;
+    @include mq('tablet') {
+      width: 96px;
+      height: 96px;
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+      opacity: 0.38;
+      fill: $color-gray-light;
+      @include mq('tablet') {
+        width: 96px;
+        height: 96px;
+      }
+    }
+  }
+  .icon-google:hover {
+    fill: #f36c4d;
+    opacity: 1;
+  }
+  .icon-fb:hover {
+    fill: #486296;
+    opacity: 1;
+  }
+  .icon-inst {
+    background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20327.7%20327.7%22%3E%3Cpath%20d%3D%22M279.7%2048c-31-31-72.1-48-115.9-48S78.9%2017%2048%2048C17%2078.9%200%20120.1%200%20163.8c0%2043.8%2017%2084.9%2048%20115.9%2030.9%2030.9%2072.1%2048%20115.8%2048%2043.8%200%2084.9-17%20115.9-48%2030.9-30.9%2048-72.1%2048-115.9%200-43.7-17.1-84.9-48-115.8zm-7.2%20224.5c-29%2029-67.6%2045-108.6%2045s-79.6-16-108.6-45-45-67.6-45-108.6%2016-79.6%2045-108.6%2067.6-45%20108.6-45%2079.6%2016%20108.6%2045%2045%2067.6%2045%20108.6c-.1%2041-16%2079.5-45%20108.6zm0%200%22%2F%3E%3Cpath%20d%3D%22M275.2%2073.6c-1.8-2.2-5-2.5-7.2-.8-2.2%201.8-2.5%205-.8%207.2%2019.1%2023.6%2029.7%2053.4%2029.7%2083.8%200%2035.6-13.8%2069-39%2094.1-25.1%2025.1-58.6%2039-94.1%2039-32.8%200-64.3-12-88.7-33.9-2.1-1.9-5.3-1.7-7.2.4-1.9%202.1-1.7%205.3.4%207.2%2026.3%2023.5%2060.2%2036.5%2095.6%2036.5%2038.3%200%2074.3-14.9%20101.4-42%2027.1-27.1%2042-63.1%2042-101.4-.1-32.6-11.5-64.7-32.1-90.1zm0%200M30.7%20163.8c0-73.4%2059.7-133.1%20133.1-133.1%2032.8%200%2064.3%2012%2088.7%2033.9%202.1%201.9%205.3%201.7%207.2-.4%201.9-2.1%201.7-5.3-.4-7.2-26.3-23.5-60.2-36.5-95.6-36.5-38.3%200-74.3%2014.9-101.4%2042s-42%2063.1-42%20101.4c0%2032.8%2011.4%2064.9%2032%2090.3%201%201.3%202.5%201.9%204%201.9%201.1%200%202.3-.4%203.2-1.1%202.2-1.8%202.5-5%20.7-7.2-18.9-23.7-29.5-53.5-29.5-84zm0%200%22%2F%3E%3Cpath%20d%3D%22M206.9%2081.7h-85.7c-21.7%200-39.4%2017.7-39.4%2039.4v85.7c0%2021.7%2017.7%2039.4%2039.4%2039.4h85.7c21.7%200%2039.4-17.7%2039.4-39.4v-85.7c0-21.7-17.7-39.4-39.4-39.4zm29%20125.2c0%2016-13%2029-29%2029h-85.7c-16%200-29-13-29-29v-85.7c0-16%2013-29%2029-29h85.7c16%200%2029%2013%2029%2029v85.7zm0%200%22%2F%3E%3Cpath%20d%3D%22M210%20111.8c-3.5%200-6.3%202.8-6.3%206.3s2.8%206.3%206.3%206.3%206.3-2.8%206.3-6.3-2.8-6.3-6.3-6.3zm0%200M164%20123.7c-22.2%200-40.3%2018.1-40.3%2040.3%200%2022.2%2018.1%2040.3%2040.3%2040.3s40.3-18.1%2040.3-40.3c0-22.2-18.1-40.3-40.3-40.3zm0%2070.3c-16.5%200-30-13.4-30-30%200-16.5%2013.4-30%2030-30%2016.5%200%2030%2013.4%2030%2030%200%2016.5-13.5%2030-30%2030zm0%200%22%2F%3E%3C%2Fsvg%3E');
+    opacity: 0.18 !important;
+  }
+  .icon-inst:hover {
+    background-image: url(../images/inst-hover.png);
+    background-size: 100%;
+    opacity: 1 !important;
+  }
+  .icon-vk:hover {
+    fill: #6796c9;
+    opacity: 1;
+  }
+  &-copyright {
+    padding-bottom: 8px;
+    background-image: url(../images/copyright-pattern.jpg);
+    background-repeat: repeat;
+    text-align: center;
+    @include mq('tablet') {
+      padding-bottom: 19px;
+    }
+    p {
+      width: 87%;
+      margin: 0 auto;
+      color: #505050;
+      font-family: $font-family-ptsans;
+      @include font-size(11px);
+      line-height: 14px;
+      font-weight: $font-weight-main;
+      text-align: center;
+      &:first-of-type {
+        padding-top: 13px;
+        @include mq('tablet') {
+          padding-top: 15px;
+        }
+      }
+      @include mq('tablet') {
+        @include font-size($font-size-main);
+      }
+    }
+  }
+}
+// /* end footer */

@@ -1,0 +1,145 @@
+/* ==========================================================================
+    HOME PAGE REVIEWS
+===========================================================================*/
+.reviews {
+  @include mq('laptop') {
+    float: right;
+    width: 207px;
+    margin-right: 2.5%;
+    margin-bottom: 179px;
+  }
+  @include mq('desktop') {
+    width: 17%;
+    max-width: 253px;
+    margin-right: 2.2%;
+    margin-top: -14px;
+    margin-bottom: 109px;
+  }
+  @media screen and (min-width: 1800px) {
+    margin-right: 4.7%;
+  }
+  .container {
+    @include mq('laptop') {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .slick-dots {
+    bottom: 0px;
+    @include mq('laptop') {
+      bottom: 0px;
+    }
+  }
+  .slick-dots li,
+  .slick-dots li button,
+  .slick-dots li button:before {
+    width: 10px;
+    height: 10px;
+  }
+  .slick-dots li button:before {
+    content: '';
+    background-color: #d6d6d6;
+    border-radius: 50%;
+    opacity: 1;
+  }
+  .slick-dots .slick-active button:before {
+    background-color: #7cca55;
+  }
+  &-list {
+    max-height: 406px;
+    padding-bottom: 29px;
+    overflow: hidden;
+    @include mq('tablet') {
+      max-height: 406px;
+      margin-bottom: 100px;
+    }
+    @include mq('laptop') {
+      max-height: 458px;
+      padding-bottom: 45px;
+    }
+    @include mq('desktop') {
+      max-height: 850px;
+    }
+  }
+  &-item {
+    padding-top: 40px;
+  }
+  &-item__img {
+    position: relative;
+    width: 155px;
+    height: 154px;
+    margin: auto;
+    box-shadow: 0 0 0 10px $color-brown-light;
+    border: 10px solid $color-white;
+    border-radius: 50%;
+    overflow: hidden;
+    @include mq('laptop') {
+      width: 163px;
+      height: 163px;
+    }
+    @include mq('desktop') {
+      width: 157px;
+      height: 157px;
+    }
+    img {
+      width: auto;
+      max-width: none;
+      height: 100%;
+    }
+  }
+  &-item__title {
+    width: 75%;
+    margin: auto;
+    margin-top: 36px;
+    color: $color-brown;
+    font-family: $font-family-title;
+    @include font-size(18px);
+    font-weight: $font-weight-main;
+    letter-spacing: 0.09px;
+    text-align: center;
+    line-height: 22px;
+    @include mq('tablet') {
+      width: 60%;
+      min-height: 66px;
+    }
+    @include mq('laptop') {
+      width: 100%;
+      margin-top: 43px;
+      @include font-size(16px);
+      line-height: 18px;
+    }
+    @include mq('desktop') {
+      margin-top: 36px;
+      @include font-size(18px);
+      line-height: 21px;
+    }
+  }
+  p {
+    margin-top: 12px;
+    color: #505050;
+    font-family: $font-family-ptsans;
+    @include font-size($font-size-main);
+    font-weight: $font-weight-main;
+    text-align: center;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    @include mq('tablet') {
+      width: 77%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include mq('laptop') {
+      width: 100%;
+      margin-top: 0;
+      @include font-size(16px);
+      line-height: 20px;
+      letter-spacing: -0.4px;
+    }
+    @include mq('desktop') {
+      margin-top: 7px;
+      line-height: 16px;
+      letter-spacing: 0.4px;
+    }
+  }
+}
+/* end  home page reviews  */

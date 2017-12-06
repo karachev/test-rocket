@@ -1,0 +1,137 @@
+.content-nav {
+  position: relative;
+  margin-bottom: 40px;
+  @include mq('tablet') {
+    width: 26.1%;
+  }
+  @include mq('laptop') {
+    width: 29.2%;
+  }
+  @include mq('desktop') {
+    width: 21.9%;
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    padding: 9px 34px;
+    color: #000000;
+    font-family: "Yeseva One";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.08px;
+    background-color: #d8d8d8;
+    border: none;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    @include mq('tablet') {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 25px;
+      margin: auto;
+      display: block;
+      width: 12px;
+      height: 20px;
+      background-image:url('data:image/svg+xml,%3Csvg%20id%3D%22%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC_%D0%B8%D0%B7%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D0%B8%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2019.1%2031.1%22%3E%3Cstyle%3E.st0%7Bfill%3Anone%3Bstroke%3A%23000%3Bstroke-width%3A5%3Bstroke-linecap%3Asquare%3Bstroke-miterlimit%3A10%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M3.5%203.5l12%2012-12%2012%22%2F%3E%3C%2Fsvg%3E');
+      background-size: 100%;
+      transform: rotate(90deg);
+    }
+    &--active {
+      &:after {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: 40px;
+    z-index: z(overlay);
+    display: block;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: 0 0 51px rgba(0, 0, 0, 0.08);
+    @include mq('tablet') {
+      position: relative;
+      top: 0;
+      display: block !important;
+      box-shadow: none;
+      padding-top: 21px;
+    }
+    @include mq('laptop') {
+      padding-top: 17px;
+    }
+    // @include mq('desktop') {
+    //   margin-top: -33px;
+    // }
+  }
+
+  li {
+    position: relative;
+    width: 76%;
+    margin-left: 15px;
+    padding-top: 8px;
+    padding-left: 19px;
+    padding-bottom: 10px;
+    @include mq('tablet') {
+      width: 78%;
+      margin-left: 0px;
+      padding-top: 0px;
+      padding-left: 0px;
+      padding-bottom: 18px;
+    }
+    @include mq('laptop') {
+      width: 80%;
+      padding-bottom: 21px;
+    }
+    @include mq('desktop') {
+      width: 93%;
+      padding-bottom: 24px;
+    }
+
+    &:hover {
+      background-color: #7cca55;
+      a:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 9px;
+        left: -16px;
+        width: 67%;
+        height: 1px;
+        background-color: #000000;
+      }
+    }
+    @include mq('tablet') {
+      &:hover {
+        a:after {
+          left: 0px;
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: #000000;
+    font-family: "Yeseva One";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    @include mq('laptop') {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+  a:hover {
+    color: #000000;
+  }
+}

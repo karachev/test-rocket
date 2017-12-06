@@ -1,0 +1,143 @@
+/* ==========================================================================
+   TYPOGRAPHY
+   ===========================================================================*/
+/* TITLES */
+h1,
+.h1{
+	font-family: $font-family-title;
+	color: $color-title;
+	line-height: $line-height-title;
+	font-weight: $font-weight-main;
+	margin-top: 0px;
+	/*margin-bottom: 0.3em;*/
+	@media screen and (max-width: 767px) {
+		margin-bottom: 17px;
+		font-size: 90px;
+	}
+	@include mq('tablet') {
+    margin-bottom: 43px;
+    font-size: 16vw;
+		font-size: 130px;
+	}
+	@include mq('laptop') {
+		margin-bottom: 8px;
+		font-size: 160px;
+	}
+	@include mq('desktop') {
+		@include font-size($font-size-h1);
+		line-height: 0.4;
+	}
+
+}
+.h1-horiz {
+	font-size: 16vw;
+	@media screen and (max-width: 767px) {
+		font-size: 90px;
+		font-size: 16vw;
+	}
+	@include mq('tablet') {
+		font-size: 130px;
+    font-size: 16vw;
+	}
+	@include mq('laptop') {
+		font-size: 160px;
+		font-size: 16vw;
+	}
+	@include mq('desktop') {
+		@include font-size($font-size-h1);
+		font-size: 16vw;
+	}
+	@media screen and (min-width: 1800px) {
+		@include font-size(306px);
+	}
+}
+h2,
+.h2{
+	font-family: $font-family-title;
+	@include font-size($font-size-h2);
+	color: $color-title;
+	line-height: $line-height-title;
+	font-weight: $font-weight-main;
+}
+h3,
+.h3{
+	font-family: $font-family-ptsans;
+	@include font-size($font-size-h3);
+	color: $color-black;
+	line-height: $line-height-title;
+	font-weight: $font-weight-main;
+}
+h4,
+.h4{
+	font-family: $font-family-ptsans;
+	@include font-size($font-size-h4);
+	color: $color-black;
+	line-height: $line-height-title;
+	font-weight: $font-weight-main;
+}
+h5,
+.h5{
+	font-family: $font-family-ptsans;
+	@include font-size($font-size-h5);
+	color: $color-black;
+	line-height: $line-height-title;
+	font-weight: $font-weight-main;
+}
+/* TEXT */
+.italic{
+	font-style: italic;
+}
+.text_center{
+	text-align: center !important;
+}
+.text_left{
+	text-align: left !important;
+}
+.text_rigth{
+	text-align: right !important;
+}
+.text_bold{
+	font-weight: 700;
+}
+.text_uppercase{
+	text-transform: uppercase;
+}
+.no-upercouse{
+	text-transform: none;
+}
+/* LINKS */
+a {
+	font-family: $font-family-ptsans;
+	@include font-size($font-size-main);
+	color: $color-link;
+	line-height: $line-height-main;
+	font-weight: $font-weight-main;
+	text-decoration: none;
+	&:hover{
+		@include mq('laptop') {
+			color: $color-link-hover;
+		}
+	}
+	//&:visited{
+	//	// color: #ffc9c9;
+	//}
+}
+a[href^="mailto:"],
+a[href^="tel:"]{
+	color: inherit;
+	text-decoration: none;
+	&:hover{
+		color: inherit;
+		text-decoration: none;
+	}
+}
+ul,
+ol{
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	li{
+		list-style: none;
+	}
+}
+/* end typography */

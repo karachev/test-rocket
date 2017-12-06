@@ -1,0 +1,33 @@
+	<!-- навиагация по страницам верстки / удалить на продакшене -->
+	<div id="pages-22" class="pages">
+		<div id="toogle-23" class="pages-header">
+			<p>Навигация страниц верстки</p>
+			<span>GP</span>
+			<i id="close-24" class="icon-pages"></i>
+		</div>
+		<ul>
+			<li><a href="./">Главная</a></li>
+			<li><a href="404.html">404</a></li>
+			<li><a href="catalog.html">Каталог</a></li>
+			<li><a href="category.html">Категория</a></li>
+			<li><a href="category_low.html">Категория _low</a></li>
+			<li><a href="company.html">Компания</a></li>
+			<li><a href="contacts.html">Контакты</a></li>
+			<li><a href="doors.html">Двери</a></li>
+			<li><a href="info.html">Информация</a></li>
+			<li><a href="news-article.html">Новости статья</a></li>
+			<li><a href="news.html">Новости</a></li>
+			<li><a href="portfolio-project.html">Портфолио проект</a></li>
+			<li><a href="portfolio.html">Портфолио</a></li>
+			<li><a href="product-item.html">Продукт</a></li>
+			<li><a href="search-result.html">Результат поиска</a></li>
+			<li><a href="ui.html">UI</a></li>
+		</ul>
+	</div>
+	<script>
+		$('#toogle-23').on('click', function(event) {
+			event.preventDefault();
+			/* Act on the event */
+			$('#pages-22').toggleClass('open');
+		});
+	</script>

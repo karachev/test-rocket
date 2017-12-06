@@ -1,0 +1,237 @@
+/* ==========================================================================
+   SUBSCRIBES
+   ===========================================================================*/
+.subscribes {
+  margin-bottom: 10px;
+  .container {
+  }
+  &-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 28px 23px;
+    border: 4px solid $color-brown-light;
+    @include mq('tablet') {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 95.4%;
+      margin: auto;
+      padding: 36px 55px;
+      padding-bottom: 125px;
+      border: 6px solid $color-brown-light;
+    }
+    @include mq('laptop') {
+      width: 98%;
+      padding: 34px 74px;
+      padding-bottom: 122px;
+      border: 8px solid $color-brown-light;
+    }
+    @include mq('desktop') {
+      width: 100%;
+      padding: 58px 100px;
+      padding-bottom: 120px;
+    }
+  }
+  &__title {
+    color: #000000;
+    font-family: $font-family-title;
+    @include font-size(18px);
+    font-weight: $font-weight-main;
+    line-height: 22px;
+    letter-spacing: 0.09px;
+    @include mq('tablet') {
+      width: 26%;
+      margin-top: 8px;
+      @include font-size(22px);
+      letter-spacing: 0.11px;
+    }
+    @include mq('laptop') {
+      width: 22%;
+      margin-top: 6px;
+      @include font-size(24px);
+      line-height: 27px;
+    }
+    @include mq('desktop') {
+      width: 17%;
+      line-height: 28px;
+    }
+  }
+  fieldset {
+    position: relative;
+    margin-top: 18px;
+    padding: 0;
+    border: none;
+    @include mq('tablet') {
+      width: 42%;
+      height: 40px;
+      margin: auto;
+      margin-top: 17px;
+    }
+    @include mq('laptop') {
+      width: 33%;
+      height: 34px;
+      margin-top: 17px;
+    }
+    @include mq('desktop') {
+      width: 39%;
+      height: 40px;
+    }
+  }
+  input {
+    width: 100%;
+    padding-bottom: 8px;
+    color: #505050;
+    font-family: $font-family-ptsans;
+    @include font-size(16px);
+    font-weight: $font-weight-main;
+    border: none;
+    border-bottom: 1px dotted $color-brown-light;
+    border-radius: 0;
+    outline: none;
+    @include placeholderOpacity(0);
+    @include mq('desktop') {
+      padding-left: 8px;
+      padding-bottom: 15px;
+    }
+  }
+  .error {
+    color: #ff0000;
+  }
+  label.error {
+    position: absolute;
+    top: 29px;
+    left: 0;
+    font-family: $font-family-ptsans;
+    @include font-size($font-size-main);
+    font-weight: $font-weight-main;
+    @include mq('desktop') {
+      top: 35px;
+    }
+  }
+  button {
+    margin-top: 48px;
+    @media screen and (min-width: 540px) {
+      margin-top: 35px;
+    }
+    @include mq('tablet') {
+      min-width: 124px;
+      margin-top: 16px;
+      padding: 0;
+    }
+    @include mq('laptop') {
+      min-width: 210px;
+      margin-top: 13px;
+    }
+    @include mq('desktop') {
+      margin-top: 10px;
+    }
+  }
+  .validate-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: $color-main-159;
+    opacity: 0;
+    z-index: z(back);
+    text-align: center;
+    transition: all 0.5s ease-in;
+    p {
+      margin: 0;
+      color: $color-white;
+      font-family: $font-family-yeseone;
+      font-size: 24px;
+      font-weight: $font-weight-main;
+      letter-spacing: 0.12px;
+    }
+  }
+  &-checkbox {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 20px;
+    text-align: left;
+    @include mq('tablet') {
+      margin-left: 22px;
+    }
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    &__text {
+      position: relative;
+      color: #505050;
+      font-family: $font-family-ptsans;
+      @include font-size(16px);
+      font-weight: $font-weight-main;
+      cursor: pointer;
+    }
+    label.error {
+      top: 45px;
+      @media screen and (min-width: 540px) {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        font-family: $font-family-ptsans;
+        @include font-size($font-size-main);
+        font-weight: $font-weight-main;
+      }
+      @include mq('tablet') {
+        top: 50px;
+      }
+      @include mq('desktop') {
+        top: 50px;
+      }
+    }
+    .error + .checkbox-label:before {
+      border-color: red;
+    }
+    .checkbox-label:before {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: -20px;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #505050;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input:checked ~ .checkbox-label:before {
+      background-color: #9fcf67;
+      border-color: #9fcf67;
+    }
+    input:checked ~ .checkbox-label:after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      left: -22px;
+      width: 20px;
+      height: 16px;
+      background-image:url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2248%22%20height%3D%2248%22%3E%3Cpath%20d%3D%22M19.281%205.281L9%2015.563%204.719%2011.28%203.28%2012.72l5%205%20.719.687.719-.687%2011-11z%22%20fill%3D%22%23fff%22%20stroke%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+    a {
+      color: #9fcf67;
+      font-family: $font-family-ptsans;
+      @include font-size(16px);
+      font-weight: $font-weight-main;
+      text-decoration: underline;
+    }
+  }
+  .validate .validate-message {
+    opacity: 1;
+    z-index: z(button);
+  }
+}
+/* end subscribes */

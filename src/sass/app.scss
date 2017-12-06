@@ -1,0 +1,99 @@
+// variables,mixins,extends
+@import "global/helpers/helpers_all";
+//normalize
+@import "global/normalize";
+
+//grid
+@import "global/grid/v4/bootstrap-grid.scss";
+
+//plugins
+@import "plugins/slick.scss";
+@import "plugins/slick-theme.scss";
+@import "plugins/swiper.scss";
+@import "plugins/_fancybox.scss";
+
+//globals
+@import "sprite/sprite";
+@import "global/global";
+@import "global/header";
+@import "global/footer";
+@import "global/pagination";
+@import "global/_share.scss";
+@import "global/_design-discount.scss";
+@import "global/_features.scss";
+@import "global/_subscribes.scss";
+@import "global/_letter-company.scss";
+@import "global/_about.scss";
+@import "global/_printed-catalogs.scss";
+@import "global/_content.scss";
+
+//portfolio
+@import "pages/portfolio/_portfolio.scss";
+
+//portfolio-project
+@import "pages/portfolio-project/_portfolio-project.scss";
+@import "pages/portfolio-project/_like-project.scss";
+
+//home
+@import "pages/home/_doors.scss";
+@import "pages/home/_about-video.scss";
+@import "pages/home/_reviews.scss";
+@import "pages/home/_portfolio.scss";
+@import "pages/home/_info.scss";
+@import "pages/home/_buy.scss";
+
+//doors
+@import "pages/doors/_doors-list.scss";
+
+//info
+@import "pages/info/_content.scss";
+
+//category
+@import "pages/category/_models.scss";
+@import "pages/category/_doors-models.scss";
+@import "pages/category/_doors-list.scss";
+
+//category_doors
+@import "pages/category-doors/_category-doors.scss";
+
+//contacts
+@import "pages/contacts/_content.scss";
+@import "pages/contacts/_map.scss";
+
+//news
+@import "pages/news/_events.scss";
+@import "pages/news/_content.scss";
+
+//news_article
+@import "pages/news-article/_content.scss";
+@import "pages/news-article/_events.scss";
+
+//product_item
+@import "pages/product-item/_product.scss";
+@import "pages/product-item/_recommend.scss";
+@import "pages/product-item/_project.scss";
+
+//search-result
+@import "pages/search-result/_search.scss";
+
+//company
+@import "pages/company/_content.scss";
+@import "pages/company/_collections.scss";
+
+//catalog
+@import "pages/catalog-main/_content.scss";
+
+//404
+@import "pages/404/content.scss";
+//ui
+@import "pages/ui/_1-branding-colors.scss";
+@import "pages/ui/_2-typography.scss";
+@import "pages/ui/_3-buttons.scss";
+
+//modals
+@import "modals/_modal-menu.scss";
+@import "modals/_modal-phone.scss";
+@import "modals/_modal-feedback.scss";
+
+//pages styles
+@import "global/helpers/pages";

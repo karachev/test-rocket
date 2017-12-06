@@ -1,0 +1,424 @@
+/*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
+.fancybox-wrap,
+.fancybox-skin,
+.fancybox-outer,
+.fancybox-inner,
+.fancybox-image,
+.fancybox-wrap iframe,
+.fancybox-wrap object,
+.fancybox-nav,
+.fancybox-tmp
+{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	vertical-align: top;
+}
+.fancybox-wrap {
+	position: absolute;
+	padding-bottom: 65px;
+	top: 0;
+	left: 0;
+	z-index: 8020;
+	min-width: 800px;
+	@include mq('laptop', 'max') {
+		min-width:600px;
+	}
+	@include mq('tablet', 'max') {
+		min-width:250px;
+	}
+}
+.fancybox-skin {
+	position: relative;
+	background-color: #fff;
+	text-shadow: none;
+	@include mq('tablet', 'max') {
+		padding:10px !important;
+	}
+}
+
+.fancybox-opened {
+	z-index: 8030;
+}
+.fancybox-outer, .fancybox-inner {
+	position: relative;
+}
+
+.fancybox-outer{
+	@include mq('laptop') {
+		margin-bottom: 70px;
+	}
+}
+.fancybox-inner {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.fancybox-type-iframe .fancybox-inner {
+	-webkit-overflow-scrolling: touch;
+}
+
+.fancybox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap;
+}
+
+.fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.fancybox-image {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	height:auto;
+	margin: 0 auto;
+}
+
+#fancybox-loading {
+	// background-image: url('../images/fancybox_sprite.png');
+}
+
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: 0.8;
+	cursor: pointer;
+	z-index: 8060;
+}
+
+#fancybox-loading div {
+	width: 44px;
+	height: 44px;
+	// background: url('../images/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-close {
+	position: absolute;
+	z-index: 88;
+	top: 20px;
+	right: 20px;
+	display: inline-block;
+	vertical-align:middle;
+	padding: 0;
+	width: 34px;
+	height: 34px;
+	font-size: 0;
+	color: transparent;
+	text-align: center;
+	background: transparent;
+	&:hover{
+		opacity: .8;
+	}
+	@include mq('laptop', 'max') {
+		top:10px;
+		right:10px;
+	}
+}
+
+.fancybox-nav {
+	// padding-top: 40px;
+	position: relative;
+	display: inline-block;
+	z-index: 5;
+	cursor:default;
+	color: #adadad;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
+	@include mq('laptop', 'max') {
+		position: absolute;
+		top:50%;
+		transform: translateY(-50%);
+		font-size: 0;
+		padding-top: 0;
+		height:auto;
+		float: none;
+		color: transparent;
+	}
+	&:hover{
+		cursor:default;
+		color: #adadad;
+		background-color: transparent;
+		&:after,
+		&:before{
+			opacity: .25;
+		}
+	}
+	&:after,
+	&:before{
+		content:'';
+		opacity: .25;
+	}
+	&.active{
+		cursor: pointer;
+		// color: $text-color;
+		&:after,
+		&:before{
+			opacity: 1;
+		}
+		&:hover{
+			// color: $text-color;
+			text-decoration: underline;
+		}
+	}
+}
+.fancybox-prev {
+	float: left;
+	@include mq('laptop', 'max') {
+		left: -35px;
+	}
+	@include mq('tablet', 'max') {
+		left: -5px;
+	}
+	&:before{
+		display: inline-block;
+		vertical-align:middle;
+		width: 21px;
+		height: 40px;
+		margin-right: 15px;
+		background:url('data:image/svg+xml,%3Csvg%20id%3D%22SvgjsSvg1000%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2022.1%2040.7%22%3E%3Cstyle%3E.st0%7Bfill%3A%23fff%3Bfill-opacity%3A0%3Bstroke%3A%234d4d4d%3Bstroke-miterlimit%3A50%7D%3C%2Fstyle%3E%3Ctitle%3E%D0%BD%D0%B0%D0%B7%D0%B0%D0%B4%3C%2Ftitle%3E%3Cpath%20id%3D%22SvgjsPath1008%22%20class%3D%22st0%22%20d%3D%22M20.8.6L1%2020.4l19.8%2019.8%22%2F%3E%3C%2Fsvg%3E') no-repeat;
+		background-size: 100%;
+	}
+}
+.fancybox-next {
+	float:right;
+	text-align: right;
+	@include mq('laptop', 'max') {
+		right: -35px;
+	}
+	@include mq('tablet', 'max') {
+		right: -5px;
+	}
+	&:after{
+		display: inline-block;
+		vertical-align:middle;
+		width: 21px;
+		height: 40px;
+		margin-left: 15px;
+		background: url('data:image/svg+xml,%3Csvg%20id%3D%22SvgjsSvg1009%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2022.1%2040.7%22%3E%3Cstyle%3E.st0%7Bfill%3A%23fff%3Bfill-opacity%3A0%3Bstroke%3A%234d4d4d%3Bstroke-miterlimit%3A50%7D%3C%2Fstyle%3E%3Ctitle%3E%D0%B2%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%3C%2Ftitle%3E%3Cpath%20id%3D%22SvgjsPath1012%22%20class%3D%22st0%22%20d%3D%22M1.3.6L21%2020.4%201.3%2040.1%22%2F%3E%3C%2Fsvg%3E') no-repeat;
+		background-size: 100%;
+	}
+}
+
+.fancybox-tmp {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	visibility: hidden;
+	max-width: 99999px;
+	max-height: 99999px;
+	overflow: visible !important;
+}
+
+/* Overlay helper */
+
+.fancybox-lock {
+    overflow: hidden !important;
+    width: auto;
+}
+
+.fancybox-lock body {
+    // overflow: hidden !important;
+}
+
+.fancybox-lock-test {
+    overflow-y: hidden !important;
+}
+
+.fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	// background-color: rgba(0, 0, 0, .8);
+	background-color:  rgba(94, 94, 94, .9);
+}
+
+.fancybox-overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.fancybox-lock .fancybox-overlay {
+	overflow: auto;
+	overflow-y: scroll;
+}
+
+/* Title helper */
+
+.fancybox-title {
+	display: inline-block;
+	margin-bottom: 40px;
+	// color: $text-color;
+	font-size: 30px;
+	font-weight: 900;
+	line-height: 39px;
+	text-transform: uppercase;
+	visibility: hidden;
+	z-index: 8050;
+	background-color: #fff;
+	@include mq('laptop', 'max') {
+		display: none;
+	}
+}
+
+.fancybox-opened .fancybox-title {
+	visibility: visible;
+}
+
+.fancybox-title-float-wrap {
+	position: absolute;
+	top: 99%;
+	width: 100%;
+	text-align: left;
+	z-index: 8050;
+	left: 0;
+	right: 0;
+	-webkit-border-radius: 0 0 20px 20px;/*Safari, Chrome*/
+	-moz-border-radius: 0 0 20px 20px;/*Firefox*/
+	border-radius: 0 0 20px 20px;
+}
+
+.fancybox-title-float-wrap .child {
+	display: inline-block;
+	background: #fff;
+	-webkit-border-radius: 0 0 20px 20px;/*Safari, Chrome*/
+	-moz-border-radius: 0 0 20px 20px;/*Firefox*/
+	border-radius: 0 0 20px 20px;
+	padding: 13px 0 24px 20px;
+}
+
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff;
+}
+
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0, 0, 0, .8);
+}
+
+/*Retina graphics!*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	   only screen and (min--moz-device-pixel-ratio: 1.5),
+	   only screen and (min-device-pixel-ratio: 1.5){
+
+	#fancybox-loading {
+		// background-image: url('../images/fancybox_sprite@2x.png');
+		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+
+	#fancybox-loading div {
+		// background-image: url('../images/fancybox_loading@2x.gif');
+		background-size: 24px 24px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+}
+/* MODAL FANCY */
+.modal-fancy{
+	position: relative;
+	width: 1200px;
+	height:880px;
+	display: none;
+	padding:20px;
+	background-color: #ebebeb;
+	text-align: left;
+	@media screen and (max-width: 1280px) {
+		width: 980px;
+	}
+	@media screen and (max-width: 979px) {
+		width: 600px;
+		height:600px;
+	}
+	@media screen and (max-width: 767px) {
+		width: 300px;
+		height:380px;
+		padding:10px;
+	}
+}
+.wrap-video{
+	width: 100%;
+	height:670px;
+	overflow:hidden;
+	@media screen and (max-width: 979px) {
+		height:400px;
+		iframe{
+			height:400px !important;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		height:200px;
+		iframe{
+			height:200px !important;
+		}
+	}
+}
+.panel-video{
+	padding-top: 15px;
+	padding-left: 5px;
+}
+.panel-video__title{
+	color: #2f2f2f;
+	@include font-size(21px);
+	line-height:1.5;
+	font-weight: 700;
+	text-decoration: underline;
+	@media screen and (max-width: 767px) {
+		@include font-size(15px);
+		line-height:1.2;
+	}
+}
+.panel-video__text{
+	height: 70px;
+	overflow: hidden;
+	p{
+		color: #6d6d6d;
+		@include font-size(14px);
+		font-weight: 400;
+	}
+}
+.panel-social{
+	display: inline-block;
+	position: absolute;
+	bottom:0;
+	left: 0;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	@media screen and (max-width: 767px) {
+		padding-left: 0;
+	}
+}
+
+.fancybox-caption{
+	display: block;
+	color: #4d4d4d;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: left;
+	display: block;
+	margin-top: 40px;
+	@media screen and (max-width: 979px) {
+		display: none;
+	}
+}
+
+/* end fancybox */

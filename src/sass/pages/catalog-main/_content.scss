@@ -1,0 +1,208 @@
+/* ==========================================================================
+   CATALOG-MAIN CONTENT
+   ===========================================================================*/
+.wrapper_catalog {
+  width: 100vw;
+  margin-top: -50px;
+  @include mq('tablet') {
+    margin-top: -75px;
+  }
+  @include mq('desktop') {
+    margin-top: -125px;
+  }
+  @media screen and (min-width: 1800px) {
+    width: 100%;
+  }
+}
+.catalog-main-doors {
+  width: 100%;
+  background-image: url('../images/catalog-main-door.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 55px;
+  &:nth-child(odd) {
+    z-index: 2;
+  }
+  @include mq('tablet') {
+    padding-top: 80px;
+  }
+  @media screen and (max-width: 1280px) {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+  }
+  @include mq('desktop') {
+    position: relative;
+    height: 105vh;
+    width: 50%;
+    float: left;
+  }
+}
+.catalog-main__title {
+  font-family: $font-family-title;
+  transform: rotate(270deg);
+  position: absolute;
+  color: $color-white;
+  z-index: 1;
+  display: inline-block;
+  font-size: 13vh;
+  top: 110px;
+  left: -17.9vh;
+  z-index: 0;
+  @include mq('tablet') {
+    @include font-size(149px);
+    top: 200px;
+    left: -205px;
+  }
+  @include mq('laptop') {
+    top: 225px;
+    left: -268px;
+    @include font-size(195px);
+  }
+  @include mq('desktop') {
+    font-size:  29vh;
+    left: -40vh;
+    top: 32vh;
+  }
+}
+.catalog-main-doors_furniture {
+  background-image: url('../images/furniture.png');
+}
+.catalog-main__title_furniture {
+  top: 115px;
+  left: -22.2vh;
+  @media screen and (min-width: 480px) {
+    top: 116px;
+    left: -22.5vh;
+  }
+  @include mq('tablet') {
+    top: 157px;
+    left: -254px;
+  }
+  @include mq('laptop') {
+    top: 198px;
+    left: -310px;
+    @include font-size(183px);
+  }
+  @include mq('desktop') {
+    left: -46.5vh;
+    top: 29vh;
+    font-size: 27.2vh;
+  }
+}
+.catalog-main-list {
+  float: right;
+  width: 230px;
+  padding: 17px 0;
+  background: rgba(124,202,85,0.8);
+  min-height: 450px;
+  padding-right: 10px;
+  @include mq('tablet') {
+    width: 275px;
+    margin-top: 35px;
+  }
+  @include mq('laptop') {
+    width: 262px;
+    margin-top: 100px;
+    padding: 35px 0;
+  }
+  @include mq('desktop') {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-height: 503px;
+  }
+  ul {
+    padding-left: 30px;
+  }
+  li {
+    line-height: 1;
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+      @include mq('laptop') {
+        margin-bottom: 11px;
+      }
+    }
+  }
+  a {
+    color: $color-white;
+    @include font-size(16px);
+    font-weight: 700;
+  }
+}
+.catalog-download__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 10px solid rgba(255,255,255,0.5);
+  background-color: $white;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  font-weight: 400;
+  padding-top: 20px;
+  margin-right: -2.35em;
+  @include mq('tablet') {
+    width: 122px;
+    height: 122px;
+  }
+  &_info {
+    span {
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+  .icon-hat {
+    width: 35px;
+    height: 21px;
+    margin: 0 auto;
+    @include mq('tablet') {
+      width: 42px;
+      height: 26px;
+    }
+  }
+  .icon-pdf {
+    width:28px;
+    height: 24px;
+    margin: 0 auto;
+    @include mq('tablet') {
+      width: 35px;
+      height: 28px;
+    }
+  }
+  span {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+.catalog-download {
+  padding-left: 20px;
+  margin-top: 15px;
+  @include mq('tablet') {
+    padding-left: 28px;
+  }
+  @include mq('laptop') {
+    margin-top: 70px;
+    padding-left: 23px;
+  }
+}
+a.catalog-download__item  {
+  color: #555555;
+  @include font-size(12px);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1;
+}
+/* end catalog-main content */

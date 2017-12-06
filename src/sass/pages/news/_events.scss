@@ -1,0 +1,229 @@
+/* ==========================================================================
+    NEWS PAGE EVENTS
+===========================================================================*/
+.events-news  {
+  margin-bottom: 46px;
+  text-align: center;
+  @include mq('tablet') {
+    margin-bottom: 51px;
+  }
+  @include mq('laptop') {
+    margin-bottom: 59px;
+  }
+  @include mq('desktop') {}
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    @include mq('tablet') {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-left: 27px;
+      padding-right: 27px;
+    }
+    @include mq('laptop') {
+      padding-left: 21px;
+      padding-right: 21px;
+    }
+  }
+
+  .events-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease-out;
+    @include mq('tablet') {
+      text-align: left;
+    }
+    @include mq('laptop') {
+      margin-bottom: 37px;
+    }
+    @include mq('desktop') {
+      margin-bottom: 36px;
+      padding-bottom: 30px;
+    }
+    &:hover {
+      box-shadow: 0 0 59px rgba(0, 0, 0, 0.11);
+      background-color: $color-white;
+      transform: scale(1.01);
+      transition: all 0.3s ease-out;
+      @include mq('laptop') {
+        transform: scale(1.03);
+      }
+      @include mq('desktop') {}
+      .events-item__title {
+        color: $color-main-159;
+      }
+      .events-item__btn {
+        color: $color-white;
+        background-color: $color-main-159;
+        border: none;
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+    @include mq('tablet') {
+      width: 48.4%;
+      margin-bottom: 24px;
+    }
+    @include mq('laptop') {
+      width: 32.8%;
+    }
+    @include mq('desktop') {}
+    &-img {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      @include mq('tablet') {
+        height: 250px;
+        margin-bottom: 73px;
+      }
+      @include mq('desktop') {
+        height: 338px;
+        margin-bottom: 150px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    &-data {
+      position: absolute;
+      top: 106px;
+      left: 15px;
+      width: 72px;
+      height: 72px;
+      border: 4px solid #b8b0ae;
+      background-color: rgba(247, 247, 247, 0.78);
+      @include mq('tablet') {
+        top: 230px;
+        left: 20px;
+        width: 79px;
+        height: 80px;
+        border-width: 6px;
+        text-align: center;
+      }
+      @include mq('laptop') {
+        left: 30px;
+        border-width: 8px;
+      }
+      @include mq('desktop') {
+        top: 324px;
+        left: 32px;
+        width: 122px;
+        height: 118px;
+        border-width: 10px;
+      }
+
+      &__day {
+        display: block;
+        color: $color-black;
+        font-family: $font-family-yeseone;
+        font-weight: $font-weight-main;
+        @include font-size(34px);
+        letter-spacing: 0.41px;
+        @include mq('laptop') {
+          @include font-size(30px);
+        }
+        @include mq('desktop') {
+          @include font-size(46px);
+          letter-spacing: 0.4px;
+        }
+      }
+
+      &__month {
+        display: block;
+        margin-top: -18px;
+        color: $color-black;
+        font-family: $font-family-yeseone;
+        font-size: $font-size-main;
+        font-weight: $font-weight-main;
+        letter-spacing: 0.17px;
+        @include mq('tablet') {
+          margin-top: -14px;
+        }
+        @include mq('laptop') {
+          margin-top: -9px;
+          @include font-size(12px);
+        }
+        @include mq('desktop') {
+          margin-top: -19px;
+          @include font-size(17px);
+          letter-spacing: 0.15px;
+        }
+      }
+    }
+
+    &__title {
+      padding: 16px 15px;
+      margin-bottom: 10px;
+      color: $color-black;
+      font-family: $font-family-yeseone;
+      @include font-size(18px);
+      font-weight: $font-weight-main;
+      line-height: 20px;
+      letter-spacing: 0.01px;
+      text-align: left;
+      @include mq('tablet') {
+        min-height: 120px;
+        margin-bottom: 23px;
+        padding: 16px 17px;
+        @include font-size(20px);
+        line-height: 22px;
+        letter-spacing: 0.1px;
+      }
+      @include mq('laptop') {
+        padding: 17px 26px;
+      }
+      @include mq('desktop') {
+        min-height: 143px;
+        margin-bottom: 14px;
+        padding: 17px 36px;
+        @include font-size(24px);
+        letter-spacing: 0.12px;
+        line-height: 27px;
+      }
+    }
+
+    &__btn {
+      width: 90%;
+      @include mq('tablet') {
+        min-width: 212px;
+        width: 56%;
+        height: 45px;
+        margin-left: 21px;
+        padding: 0;
+      }
+      @include mq('laptop') {
+        margin-left: 31px;
+      }
+      @include mq('desktop') {
+        width: 52%;
+      }
+    }
+  }
+
+  .events__more {
+    color: #797979;
+    font-family: $font-family-ptsans;
+    @include font-size(16px);
+    font-weight: $font-weight-main;
+    border: none;
+    border-bottom: 1px dashed #797979;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    @include mq('tablet') {
+      margin-top: 19px;
+    }
+    @include mq('desktop') {
+      margin-top: 31px;
+    }
+  }
+}
+/* end news page events  */

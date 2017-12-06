@@ -1,0 +1,80 @@
+/* ==========================================================================
+   TABLE
+   ===========================================================================*/
+$color-cell: $color-gray-darken;
+$color-head: $color-main;
+$background-table: #fff;
+
+.table-wrap{
+	width: 100%;
+	overflow: hidden;
+}
+.price{
+	table{
+		width: 100%;
+		border-collapse: collapse;
+		border-style: hidden;
+		overflow: hidden;
+		background-color: $background-table;
+		/*THEAD*/
+		thead{
+			width:100%;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		th{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			font-family: $ff-semi;
+			line-height: 1.3;
+			color: $color-head;
+			padding-left: 20px;
+			padding-right: 20px;
+			&:first-child{
+				text-align: left;
+			}
+		}
+		/* TBODY */
+		tbody{
+			width:100%;
+			tr{
+				&:nth-child(2n + 2){
+					background-color: $color-gray;
+				}
+				&:first-child{
+					width:100%;
+					text-transform: uppercase;
+					text-align: center;
+					td{
+						padding-top: 20px;
+						padding-bottom: 20px;
+						font-family: $ff-semi;
+						line-height: 1.3;
+						color: $color-head;
+						padding-left: 20px;
+						padding-right: 20px;
+						&:first-child{
+							text-align: left;
+						}
+					}
+				}
+			}
+		}
+		td{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			color: $color-cell;
+			font-family: $ff-semi;
+			line-height: 1.3;
+			text-align: left;
+			padding-left: 20px;
+			padding-right: 20px;
+			vertical-align: top;
+			&:last-child{
+				text-align: center;
+			}
+		}
+	}
+}
+
+/* end table */
