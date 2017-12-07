@@ -1,0 +1,53 @@
+/* ==========================================================================
+   FEATURES
+   ===========================================================================*/
+.features {
+  .container {
+
+  }
+
+  &-item {
+
+  }
+
+  &-item__img {
+
+  }
+
+  &-item__title {
+    color: #40474e;
+    font-family: "PT Sans";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &-item__text {
+    color: #787b80;
+    font-family: "PT Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .icon {
+    fill: #50c3af;
+  }
+
+  .icon-profesional {
+    width: 43px;
+    height: 31px;
+  }
+
+  .icon-amateur {
+    width: 39px;
+    height: 35px;
+  }
+
+  .icon-everyone {
+    width: 39px;
+    height: 42px;
+  }
+}
+/* end features */
