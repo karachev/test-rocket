@@ -1,12 +1,11 @@
-@import "_functions.scss";
 //
 //1. FONTS
 //
 
 //NEW INCLUDE FONTS FROM MIXIN
-@include font-face('PTSans', '../fonts/PTSansRegular', 400, normal, eot woff2 woff ttf);
-@include font-face('PTSans', '../fonts/PTSansBold', 700, normal, eot woff ttf);
-@include font-face('Yeseva One', '../fonts/YesevaOne-Regular', 400, normal, eot woff2 woff ttf);
+//@include font-face('PTSans', '../fonts/PTSansRegular', 400, normal, eot woff2 woff ttf);
+//@include font-face('PTSans', '../fonts/PTSansBold', 700, normal, eot woff ttf);
+//@include font-face('Yeseva One', '../fonts/YesevaOne-Regular', 400, normal, eot woff2 woff ttf);
 
 $font-family-main: Georgia, Times, "Times New Roman", serif;
 $font-family-ptsans: 'PTSans', sans-serif;
@@ -42,10 +41,9 @@ $color-white: #fff;
 $color-danger: red;
 $color-success: green;
 $color-warning: yellow;
-$color-text: $color;
-$color-title: $color-gray-237;
-$color-link: $color-brown;
-$color-link-hover: $color-main-159;
+$color-title: $color-black;
+$color-link: $color-black;
+$color-link-hover: $color-black;
 $background-body: $color-white;
 
 //
