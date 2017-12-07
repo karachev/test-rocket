@@ -38,7 +38,10 @@
 ### 3. Шрифты:
 
 * На сайте используются шрифты:
-
+ - "Open Sans Regular",
+ - "PT Sans Bold"
+  - "PT Sans Regular"
+ - "Ubuntu"
 
 * Шрифты находятся в папке `build/fonts/`
 
