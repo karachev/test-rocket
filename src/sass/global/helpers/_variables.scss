@@ -2,25 +2,10 @@
 //1. FONTS
 //
 
-//NEW INCLUDE FONTS FROM MIXIN
-//@include font-face('PTSans', '../fonts/PTSansRegular', 400, normal, eot woff2 woff ttf);
-//@include font-face('PTSans', '../fonts/PTSansBold', 700, normal, eot woff ttf);
-//@include font-face('Yeseva One', '../fonts/YesevaOne-Regular', 400, normal, eot woff2 woff ttf);
-
 $font-family-main: Georgia, Times, "Times New Roman", serif;
-$font-family-ptsans: 'PTSans', sans-serif;
-$font-family-yeseone: 'Yeseva One', sans-serif;
-$font-family-title: $font-family-yeseone;
-
-
-//SIZE
-$font-size-main: 14px;
-$font-size-title: 193px;
-$font-size-h1: $font-size-title;
-$font-size-h2: 96px;
-$font-size-h3: 30px;
-$font-size-h4: 24px;
-$font-size-h5: 16px;
+$font-family-ptsans: 'PT Sans', 'Impact', sans-serif;
+$font-family-opensans: "OpenSans", 'Verdana', sans-serif;
+$font-family-ubuntu: 'Ubuntu', 'Verdana', sans-serif;
 
 //LINE HEIGHT
 $line-height-main: 1.6;
@@ -34,10 +19,11 @@ $font-weight-title: 700;
 //2. COLORS
 //
 
-$color-main: #9fcf67;
+$color-white: #fff;
+$color-main: #0b2d3d;
+
 $color-main-168: #a8d476; //rgb(168, 212, 118);
 $color-black: #000;
-$color-white: #fff;
 $color-danger: red;
 $color-success: green;
 $color-warning: yellow;
@@ -49,13 +35,9 @@ $background-body: $color-white;
 //
 // 4. @MEDIA QUERIES
 //
-$breakpoints: (
-	"phone":   320px,
-	"tablet":       768px,
-	"laptop":      980px,
-	"desktop":      1280px,
-);
-// @include mq('tablet') {}
+$mobile-widths: "(min-width: 320px)";
+$tablet-widths: "(min-width: 768px)";
+$desktop-widths: "(min-width: 1150px)";
 
 //
 // 5. Z-INDEX ELEMENTS

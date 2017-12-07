@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+  url("../fonts/opensansregular/opensansregular.woff") format("woff"),
+  url("../fonts/opensansregular/opensansregular.eot") format("eot"),
+  url("../fonts/opensansregular/opensansregular.ttf") format("ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+  url("../fonts/PTSans/PTSansBold/PTSansBold.woff") format("woff"),
+  url("../fonts/PTSans/PTSansBold/PTSansBold.eot") format("eot"),
+  url("../fonts/PTSans/PTSansBold/PTSansBold.ttf") format("ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"),
+  url("../fonts/Ubuntu/UbuntuBold/ubuntubold.woff") format("woff"),
+  url("../fonts/Ubuntu/UbuntuBold/ubuntubold.eot") format("eot"),
+  url("../fonts/Ubuntu/UbuntuBold/ubuntubold.ttf") format("ttf");
+  font-weight: bold;
+}

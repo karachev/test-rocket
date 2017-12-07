@@ -1,0 +1,26 @@
+body {
+  position: relative;
+  font-family: $font-family-main;
+  font-size: 12px;
+  line-height: $line-height-main;
+  //font-weight: $font-weight-main;
+  //color: $color-text;
+  //background: $background-body;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-flow:column;
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #eaeaeb;
+
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.hidden {
+  display: none;
+}
