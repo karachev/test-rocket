@@ -25,15 +25,19 @@
   }
 
   &-item__title {
+    margin: 20px auto;
+    padding-bottom: 15px;
     color: #40474e;
     font-family: $font-family-ptsans;
     font-size: 16px;
     font-weight: $font-weight-title;
     line-height: 24px;
     text-transform: uppercase;
+    border-bottom: 2px solid rgba(41, 49, 57, 0.06);
   }
 
   &-item__text {
+    margin: 18px auto;
     color: #787b80;
     font-family: $font-family-ptsans;
     font-size: 14px;
