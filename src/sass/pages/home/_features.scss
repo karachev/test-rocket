@@ -4,6 +4,9 @@
 .features {
   background-color: #eeeeef;
 
+  padding-top: 26px;
+  padding-bottom: 20px;
+
   @media #{$tablet-widths} {
     padding-top: 53px;
     padding-bottom: 40px;
@@ -20,6 +23,12 @@
     text-align: center;
     @media #{$tablet-widths} {
       padding: 0 20px;
+    }
+  }
+
+  &-item:not(:last-child) {
+    @media #{$mobile-widths} {
+      margin-bottom: 30px;
     }
   }
 
