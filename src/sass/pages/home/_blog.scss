@@ -1,42 +1,45 @@
 .blog {
+  background-color: #f5f5f5;
   .container {
-
+    @media #{$tablet-widths} {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   &-item {
-
+    @media #{$tablet-widths} {
+      width: 40%;
+    }
   }
 
   &-item__img {
     img {
-
+      width: 100%;
+      height: auto;
     }
   }
 
   &-item__title {
     color: #40474e;
-    font-family: "PT Sans";
+    font-family: $font-family-ptsans;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: $font-weight-title;
     line-height: 24px;
     text-transform: uppercase;
   }
 
   &-item__text {
     color: #787b80;
-    font-family: "PT Sans";
+    font-family: $font-family-ptsans;
     font-size: 14px;
-    font-weight: 400;
+    font-weight: $font-weight-main;
     line-height: 24px;
   }
 
   &-item__button {
-    color: #f5f5f5;
-    font-family: "PT Sans";
     font-size: 14px;
-    font-weight: 400;
+    font-weight: $font-weight-main;
     line-height: 24px;
-    border: none;
-    background-color: #50c3af;
   }
 }

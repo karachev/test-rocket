@@ -38,18 +38,3 @@ $background-body: $color-white;
 $mobile-widths: "(min-width: 320px)";
 $tablet-widths: "(min-width: 768px)";
 $desktop-widths: "(min-width: 1150px)";
-
-//
-// 5. Z-INDEX ELEMENTS
-//
-
-$z-layers: (
-	back: -1,
-	default: 1,
-	button: 3,
-	label-error:4,
-	overlay: 4000,
-	modal: 4001
-);
-
-// z-index: z(overlay);
