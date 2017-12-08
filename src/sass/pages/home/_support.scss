@@ -5,6 +5,8 @@
   }
 
   &__title {
+    position: relative;
+    padding-left: 30px;
     color: #384048;
     font-family: $font-family-ptsans;
     font-size: 18px;
@@ -13,6 +15,20 @@
     text-transform: uppercase;
 
     border-bottom: 2px solid rgba(41, 49, 57, 0.06);
+  }
+
+  &__title:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 23px;
+    background-image: url("../images/circle.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
   }
 
   &__text {

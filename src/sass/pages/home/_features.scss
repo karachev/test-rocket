@@ -10,11 +10,18 @@
   }
 
   &-item {
+    padding: 0 10px;
     text-align: center;
+    @media #{$tablet-widths} {
+      padding: 0 20px;
+    }
   }
 
   &-item__img {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
   }
 
   &-item__title {

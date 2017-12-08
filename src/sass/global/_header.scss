@@ -11,13 +11,16 @@
   background-repeat: no-repeat;
   background-color: #0a2d3e;
   &-logo {
+    position: relative;
     display: block;
     margin: auto;
     width: 109px;
     height: 44px;
+    z-index: 3;
     @media #{$tablet-widths} {
       margin-top: 56px;
       margin-bottom: 38px;
+      z-index: 1;
     }
   }
 
@@ -29,10 +32,11 @@
 
   &-nav {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     background-color: $color-main;
-    margin-left: -10px;
-    height: 545px;
+    height: 100%;
     z-index: 2;
     transition: transform 0.5s ease-in;
     @media #{$tablet-widths} {
@@ -61,6 +65,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 3;
     @media #{$tablet-widths} {
       display: none;
     }
@@ -118,7 +123,7 @@
   &-nav__list {
     display: flex;
     flex-direction: column;
-    margin: 30px auto 0;
+    margin: 60px auto 0;
     padding: 0;
     text-align: center;
     @media #{$tablet-widths} {
