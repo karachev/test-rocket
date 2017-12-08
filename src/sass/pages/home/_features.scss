@@ -3,6 +3,12 @@
    ===========================================================================*/
 .features {
   background-color: #eeeeef;
+
+  @media #{$tablet-widths} {
+    padding-top: 53px;
+    padding-bottom: 40px;
+  }
+
   .container {
     @media #{$tablet-widths} {
       display: flex;
@@ -46,7 +52,7 @@
   }
 
   .icon {
-    fill: #50c3af;
+    fill: $color-button;
   }
 
   .icon-profesional {

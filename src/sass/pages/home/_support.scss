@@ -1,12 +1,19 @@
+/* ==========================================================================
+   SUPPORT
+   ===========================================================================*/
 .support {
   background-color: #eeeeef;
+  @media #{$tablet-widths} {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
   .container {
 
   }
 
   &__title {
     position: relative;
-    padding-left: 30px;
+    padding-left: 40px;
     padding-bottom: 15px;
     color: #384048;
     font-family: $font-family-ptsans;
@@ -15,6 +22,9 @@
     line-height: 24px;
     text-transform: uppercase;
     border-bottom: 2px solid rgba(41, 49, 57, 0.06);
+    @media #{$tablet-widths} {
+      margin: 0;
+    }
   }
 
   &__title:before {
@@ -37,12 +47,20 @@
     font-size: 14px;
     font-weight: $font-weight-main;
     line-height: 24px;
+    @media #{$tablet-widths} {
+      margin: 20px 0;
+    }
+
   }
 
   &__button {
     font-size: 14px;
     line-height: 24px;
     background-color: #d2d5da;
+    @media #{$tablet-widths} {
+      margin-top: 11px;
+      padding: 4px 18px;
+    }
   }
 
   &__button:hover {
@@ -52,3 +70,5 @@
     background-color: darken(#d2d5da, 30%);
   }
 }
+
+/* end support */

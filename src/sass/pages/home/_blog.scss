@@ -1,5 +1,12 @@
+/* ==========================================================================
+   BLOG
+   ===========================================================================*/
 .blog {
   background-color: #f5f5f5;
+  @media #{$tablet-widths} {
+    padding-top: 65px;
+    padding-bottom: 79px;
+  }
   .container {
     @media #{$tablet-widths} {
       display: flex;
@@ -29,6 +36,9 @@
     line-height: 24px;
     text-transform: uppercase;
     border-bottom: 2px solid rgba(41, 49, 57, 0.06);
+    @media #{$tablet-widths} {
+      margin: 30px 0;
+    }
   }
 
   &-item__text {
@@ -40,8 +50,11 @@
   }
 
   &-item__button {
+    margin-top: 13px;
+    padding: 4px 18px;
     font-size: 14px;
     font-weight: $font-weight-main;
     line-height: 24px;
   }
 }
+/* end blog */
