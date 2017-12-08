@@ -3,13 +3,16 @@
    ===========================================================================*/
 .header {
   position: relative;
-  min-height: 589px;
+  min-height: 439px;
   padding-top: 10px;
   background-image: url("../images/bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #0a2d3e;
+  @media #{$tablet-widths} {
+    min-height: 589px;
+  }
   &-logo {
     position: relative;
     display: block;
